@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido embebido</title>
+    <style>
+        img {
+            max-width: 100%;
+        }
+
+        img>path {
+            fill: red;
+        }
+    </style>
+</head>
+<!-- 
+    Las imagenes que no son principales para el sitio web, tienen que ser
+    vectoriales, como por ejemplo, en formato svg
+    Las imagenes principales del sitio puede estar en lo siguiente formatos:
+    jpeg | jpg -> imagen de fondo, paisajes, con muchos detalles.
+    png -> imagen con fondo trasnparente
+    gif -> imagen que tenga movimiento
+    Se recomienda convertir las imagenes principales a formato webp, para
+    que pesen menos.
+ -->
+<!-- 
+     img -> representa una imagen en el documento
+  -->
+
+<body>
+    <h1>Contenido embebido</h1>
+    <!-- 
+        Es buena práctica colocar el atributo alt en una imagen porque sivre de texto alternativo cuando la imagen no pueda cargar en el sitio web
+     -->
+    <img src="/leccion-6/assets/images/squartlu.jpg" alt="jpg de squartlu" title="jpg de squartlu">
+    <img src="/leccion-6/assets/images/squartlu.webp" alt="webp de squartlu" title="webp de squartlu">
+    <img src="/leccion-6/assets/images/pikachu.png" alt="png de pikachu" title="png de pikachu">
+    <img src="/leccion-6/assets/images/pikachu.webp" alt="webp de pikachu" title="webp de pikachu">
+    <img src="/leccion-6/assets/images/perusmat.gif" alt="gif de persumat" title="gif de persumat">
+    <img src="/leccion-6/assets/images/perusmat.webp" alt="webp de perusmat" title="webp de perusmat">
+    <img src="/leccion-6/assets/images/facebook.svg" alt="svg de facebook" title="svg de facebook">
+    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+        <path style="fill:darkblue;" d="M448,0H64C28.704,0,0,28.704,0,64v384c0,35.296,28.704,64,64,64h384c35.296,0,64-28.704,64-64V64
+	C512,28.704,483.296,0,448,0z" />
+        <path style="fill:white;" d="M432,256h-80v-64c0-17.664,14.336-16,32-16h32V96h-64l0,0c-53.024,0-96,42.976-96,96v64h-64v80h64
+	v176h96V336h48L432,256z" />
+    </svg>
+</body>
+
+</html>

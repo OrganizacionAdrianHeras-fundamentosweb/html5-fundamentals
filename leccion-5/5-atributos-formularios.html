@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos de los formularios</title>
+</head>
+<!-- 
+    placeholder -> Da una pista de lo que el usuario tiene que introducir
+    required -> Hace que un campo sea obligatorio
+    readonly -> Hace que un campo sea de solo lectura, pero igual
+    se enviará por el formulario
+    disabled -> Desactiva el campo, no se podrá escribir en el y tampoco
+    se enviará por el formulario
+    hidden -> Oculta el campo, pero igual se enviará por el formulario
+    min - max -> Establece el mínimo y máximo de un campo numérico
+    minlength - maxlength -> Establece el mínimo y máximo de caracteres
+    de un campo de texto
+    selected -> Equivalea cheked en los select, sirve para establecer una opción
+    por defecto
+    autofocus -> Para obtener el foco por defecto al cargar el formulario
+ -->
+
+<body>
+
+    <form>
+        <div>
+            <label for="lnombre">Nombre:</label>
+            <input type="text" name="nnombre" id="lnombre" placeholder="Ingresa un nombre">
+        </div>
+        <div>
+            <label for="lapepat">Apellido Paterno:</label>
+            <input type="text" name="napepat" id="lapepat" placeholder="Ingresa el apellido paterno" required>
+        </div>
+        <div>
+            <label for="lapemat">Apellido Materno:</label>
+            <input type="text" name="napemat" id="lapemat" placeholder="Imgresa el apellido materno" readonly>
+        </div>
+        <div>
+            <label for="ledad">Edad:</label>
+            <input type="number" name="nedad" id="ledad" min="1" max="100" required>
+        </div>
+        <div>
+            <label for="lemail">Email:</label>
+            <input type="email" name="nemail" id="lemail" value="rbardales@gmail.com" disabled>
+        </div>
+        <div>
+            <label for="lpass">Password:</label>
+            <input type="password" name="npass" id="lpass" value="12345" hidden>
+        </div>
+        <div>
+            <label for="ltel">Telefono:</label>
+            <input type="tel" name="ntel" id="ltel" autofocus>
+        </div>
+        <div>
+            <label for="lmascota">Mascota:</label>
+            <input type="text" name="nmascota" id="lmascota" minlength="2" maxlength="10" required>
+        </div>
+        <div>
+            <label>Genero:</label>
+            <label for="lmasculino">Masculino</label>
+            <input type="radio" name="genero" id="lmasculino" value="masculino" checked>
+            <label for="lfemenino">Femenino</label>
+            <input type="radio" name="genero" id="lfemenino" value="femenino">
+        </div>
+        <div>
+            <label for="lcurso">Curso preferido:</label>
+            <select name="cursos" id="lcurso">
+                <option value="html">HTML</option>
+                <option value="css" selected>CSS</option>
+                <option value="javascript">Javascript</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+
+</body>
+
+</html>

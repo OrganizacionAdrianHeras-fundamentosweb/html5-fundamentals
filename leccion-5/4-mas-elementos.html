@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas elementos</title>
+</head>
+<!-- 
+    fieldset -> Se utiliza para agrupar elementos dentro de un formulario
+    legend -> Representa una etiqueta para el contenido del fieldset
+    file ->Este input se utiliza para cargar archivos y enviarlos desde un formulario
+    meter -> Representa un valor escalar dentro de un rango conocido o un valor fraccionario
+    progress ->Representa el progreso de una tarea
+    textarea -> Se utiliza para introducir texto en un formulario
+ -->
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="lname">Nombre:</label>
+            <input type="text" name="nname" id="lname">
+            <label for="lsurname">Apellidos:</label>
+            <input type="text" name="nsurname" id="lsurname">
+        </fieldset>
+        <fieldset>
+            <legend>Archivo</legend>
+            <label for="lfile">Selecionar archivo:</label>
+            <input type="file" name="nfile" id="lfile" accept="image/png, image/jpeg">
+        </fieldset>
+        <fieldset>
+            <legend>Barra de medida y progreso</legend>
+            <label for="fuel">Combustible:</label>
+            <meter id="fuel" min="0" max="100" low="30" high="60" optimum="100" value="50">at 50/100</meter>
+            <label for="lprogress">File Progress:</label>
+            <progress id="lprogress" max="100" value="80">80%</progress>
+        </fieldset>
+        <fieldset>
+            <legend>TextArea</legend>
+            <label for="ltextarea">Comentario:</label>
+            <textarea name="ntextarea" id="ltextarea" cols="50" rows="5"></textarea>
+        </fieldset>
+    </form>
+</body>
+
+</html>

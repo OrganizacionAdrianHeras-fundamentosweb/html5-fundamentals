@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido embebido 2</title>
+    <style>
+        video,
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<!-- 
+    DPR (Device Pixel Ratio)
+    Es la relación que existe entre los píxeles reales que tiene el dispositivo
+    y los píxeles que tenemos disponibles para "pintar" contenido
+
+    DPR = píxeles reales / píxeles disponibles
+    
+    iframe -> epresenta un contexto de navegación anidado, el cual permite incrustrar otra página HTML en la página actual.
+    Pero no se recomienda abusar del mismo, por el peso que genera sobre el sitio web
+    picture -> es un contenedor usado para especificar múltiples elementos <source> y un elemento <img> contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos
+        source -> especifica recursos de medios múltiples para los elementos <picture>, <audio>, o <video>
+    audio -> se usa para insertar contenido de audio en un documento
+    video -> se utiliza para incrustar vídeos en un documento
+    figure -> representa contenido independiente, a menudo con un título. Si bien se relaciona con el flujo principal, su posición es independiente de éste
+    figcaption -> representa un subtítulo o leyenda asociado al contenido del elemento
+  -->
+
+<body>
+    <header>
+        <h1>Contenido embebido 2</h1>
+    </header>
+    <!-- 
+        Significa que cuando el DPR sea 3
+        se mostrara como imagen la portada mobile
+     -->
+    <!-- <img srcset="/leccion-6/assets/images/portada.webp,/leccion-6/assets/images/portada-mobile.webp 3x" 
+        alt="portada"> -->
+    <main>
+        <section>
+            <picture>
+                <!-- 
+                Por defecto cada enlace de srcset tiene una dimension depixel de 1x. En este caso ambos enlaces 
+                comparten 1x, quiere decir que si la primera extension de imagen webp no se llega a renderizar
+                se probará renderizar la siguiente imagen en el srcset
+             -->
+                <source srcset="/leccion-6/assets/images/portada.webp, /leccion-6/assets/images/portada.jpg 1x"
+                    media="(min-width: 500px)">
+                <img src="/leccion-6/assets/images/portada-mobile.webp" alt="portada">
+            </picture>
+            <audio src="/leccion-6/assets/audio/instinto.mp3" controls autoplay muted loop></audio>
+            <video src="/leccion-6/assets/video/instinto.mp4" controls autoplay muted loop
+                poster="/leccion-6/assets/images/portada.jpg"></video>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/okBN_4DrRX0"
+                title="YouTube video player instinto"></iframe>
+        </section>
+        <section>
+            <h2>Gatos</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga eligendi beatae ut explicabo consequatur
+                hic
+                impedit eum excepturi autem! Officiis voluptatum maxime consectetur doloribus, natus pariatur laborum
+                eos
+                veritatis nisi?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta sit earum aliquid nulla iusto itaque
+                repellat
+                corporis fugit eos id deleniti cupiditate, asperiores eveniet! Quaerat, dolorum porro. Veritatis, rerum.
+                Tempora.</p>
+            <figure>
+                <img src="/leccion-6/assets/images/squartlu.webp" alt="webp de squartlu" title="webp de squartlu">
+                <figcaption>Sus habilidades son de tipo agua</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam aliquid vitae a magnam dolor? Maiores sint,
+                accusamus nisi assumenda ab nostrum nulla sit vitae asperiores quia? Explicabo et tempore ad!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque facilis iure deserunt ut dicta aut, iste
+                sint tenetur, nemo possimus explicabo est. Rem culpa quasi quia saepe eum enim delectus!</p>
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de input</title>
+</head>
+<!-- 
+    input type:
+    button -> Se comporta igual que un botón <button>
+    submit -> Se utiliza para enviar un formulario
+    
+    date -> Se utiliza para introducir un fecha
+    datetime -> Obsoleto
+    datetime-local -> fecha y hora, no funciona en firefox
+    time -> Se utiliza para introducir una hora
+    TIP
+        *Se recomienda usar date y time para
+        seleccionar fecha y hora
+    month -> Se utiliza para introducir un mes
+    week -> Se utiliza para introducir el número de semana del año
+
+    search -> Se utiliza para las barras de búsqueda
+    tel -> Se utiliza para introducir números telfónicos
+    email -> Se utiliza para introducir un email
+    password -> Se utiliza para contraseñas
+    url -> Se utiliza para introducir URLs
+
+    color -> se utiliza para especificar una fecha
+    number -> Se utiliza para valores numéricos
+    range -> Se utiliza para establecer un rango
+    reset -> Se utiliza para resetar el formulario
+    text -> Valor por defecto
+    
+    hidden -> Campo oculto, puede contener valor pero no se mostrará      
+    
+ -->
+
+<body>
+
+    <form>
+        <div>
+            <label for="lcolor">Color:</label>
+            <input type="color" name="ncolor" id="lcolor">
+        </div>
+        <div>
+            <label for="lnumber">Number:</label>
+            <input type="number" name="nnumber" id="lnumber">
+        </div>
+        <div>
+            <label for="lrange">Range:</label>
+            <input type="range" name="nrange" step="10" min="0" max="50" id="lrange">
+        </div>
+        <div>
+            <label for="lreset">Reset:</label>
+            <input type="reset" id="lreset">
+        </div>
+        <div>
+            <label for="ltext">Text:</label>
+            <input type="text" name="ntext" id="ltext">
+        </div>
+        <div>
+            <label for="ldatetime">Datetime:</label>
+            <input type="datetime-local" name="ndatetime" id="ldatetime">
+        </div>
+        <div>
+            <label for="ldate">Date:</label>
+            <input type="date" name="ndate" id="ldate">
+        </div>
+        <div>
+            <label for="ltime">Time:</label>
+            <input type="time" name="ntime" id="ltime">
+        </div>
+        <div>
+            <label for="lmonth">Month:</label>
+            <input type="month" name="nmonth" id="lmonth">
+        </div>
+        <div>
+            <label for="lweek">Week:</label>
+            <input type="week" name="nweek" id="lweek">
+        </div>
+        <div>
+            <label for="lsearch">Search:</label>
+            <input type="search" name="nsearch" id="lsearch">
+        </div>
+        <div>
+            <label for="ltelephone">Telephone:</label>
+            <input type="tel" name="ntelephone" id="ltelephone">
+        </div>
+        <div>
+            <label for="lemail">Email:</label>
+            <input type="email" name="nemail" id=lemail>
+        </div>
+        <div>
+            <label for="lpassword">Password:</label>
+            <input type="password" name="npassword" id="lpassword">
+        </div>
+        <div>
+            <label for="lurl">Url:</label>
+            <input type="url" name="nurl" id="lurl">
+        </div>
+        <div>
+            <input type="submit" value="Enviar input">
+            <button>Enviar button</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
