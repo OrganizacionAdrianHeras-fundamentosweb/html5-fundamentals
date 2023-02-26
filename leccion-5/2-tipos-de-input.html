@@ -34,8 +34,8 @@
     reset -> Se utiliza para resetar el formulario
     text -> Valor por defecto
     
-    hidden -> Campo oculto, puede contener valor pero no se mostrará      
-    
+    hidden -> Campo oculto, puede contener valor pero no se mostrará.
+    Ni ocupará espacio.
  -->
 
 <body>
@@ -100,6 +100,9 @@
         <div>
             <label for="lurl">Url:</label>
             <input type="url" name="nurl" id="lurl">
+        </div>
+        <div>
+            <input type="hidden" name="nhidden" value="oculto">
         </div>
         <div>
             <input type="submit" value="Enviar input">
