@@ -11,6 +11,9 @@
     La estructura básica de un formulario se compone de 4 elementos
 
     form -> es la etiqueta que engloba nuestro formulario
+        action: atributo de form que define la URL al que se enviarán los datos
+        novalidate: desactiva la validación html por defecto, de los campos del formulario.
+                    Es últil si deseas manajer la validacion por Javascript y/o servidor
     label -> sirve para escribir el nombre de un campo a rellenar
     input -> sirve para crear un campo que permitiráal usuario interactuar
     button -> crea un botón que permitirá enviar un formulario
@@ -18,7 +21,7 @@
 
 <body>
 
-    <form name="form1" action="" method="post">
+    <form name="form1" action="" method="post" novalidate>
         <!-- primera forma -->
         <label for="name">Nombre:</label>
         <!-- segunda formar -->
@@ -27,7 +30,7 @@
             Nombre:
             <input>
         </label>
-        
+
         <button>Enviar formulario</button>
     </form>
 
